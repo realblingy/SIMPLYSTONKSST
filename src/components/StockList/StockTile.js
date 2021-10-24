@@ -38,7 +38,7 @@ const StockTile = ({ name, symbol, lazy, scoreData = {} }) => {
   const { future, health, income, misc, past } = scoreData;
 
   return (
-    <StockTileContainer hover>
+    <StockTileContainer data-testid="stocktile" hover>
       {lazy ? (
         <>
           <StyledTableCell>

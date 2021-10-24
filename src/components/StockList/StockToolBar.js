@@ -40,7 +40,7 @@ const StockToolBar = ({ country, setCountry, marketCap, setMarketCap }) => {
   };
 
   return (
-    <Toolbar style={{ color: "white" }}>
+    <Toolbar data-testid="stocktoolbar" style={{ color: "white" }}>
       <StyledTypography>Biggest {country} Market Cap Gainers</StyledTypography>
       <FormControl>
         <StyledInputLabel id="country-select">Country</StyledInputLabel>
@@ -49,10 +49,17 @@ const StockToolBar = ({ country, setCountry, marketCap, setMarketCap }) => {
           value={country}
           onChange={handleCountryChange}
           label="Country"
+          data-testid="country-select-test"
         >
-          <MenuItem value="AU">Australia</MenuItem>
-          <MenuItem value="US">United States</MenuItem>
-          <MenuItem value="CA">Canada</MenuItem>
+          <MenuItem value="AU" data-testid="country-select-option">
+            Australia
+          </MenuItem>
+          <MenuItem value="US" data-testid="country-select-option">
+            United States
+          </MenuItem>
+          <MenuItem value="CA" data-testid="country-select-option">
+            Canada
+          </MenuItem>
         </StyledSelect>
       </FormControl>
       <FormControl>

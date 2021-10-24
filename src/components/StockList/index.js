@@ -45,7 +45,12 @@ const StyledTableCell = styled(TableCell)`
 const renderStocks = (stocks) => {
   if (stocks !== null) {
     return stocks.map(({ name, ticker_symbol, score }) => (
-      <StockTile name={name} symbol={ticker_symbol} scoreData={score.data} />
+      <StockTile
+        key={ticker_symbol}
+        name={name}
+        symbol={ticker_symbol}
+        scoreData={score.data}
+      />
     ));
   }
 };
@@ -98,9 +103,11 @@ const StockList = () => {
       <StockListTable>
         <StyledTableHead>
           <TableRow>
-            <StyledTableCell width={"500px"}>Name</StyledTableCell>
-            <StyledTableCell>Symbol</StyledTableCell>
-            <StyledTableCell>Score</StyledTableCell>
+            <StyledTableCell key="name" width={"500px"}>
+              Name
+            </StyledTableCell>
+            <StyledTableCell key="symbol">Symbol</StyledTableCell>
+            <StyledTableCell key="score">Score</StyledTableCell>
           </TableRow>
         </StyledTableHead>
         {loadingData ? (

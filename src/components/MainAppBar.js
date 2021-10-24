@@ -1,6 +1,7 @@
 import { AppBar } from "@material-ui/core";
 import React from "react";
 import styled from "styled-components";
+import StonksLogo from "../assets/images/logo.png";
 
 const TopBar = styled(AppBar)`
   && {
@@ -18,7 +19,8 @@ const MainAppBar = () => {
   return (
     <TopBar>
       <span>
-        <b>SIMPLY SESAME </b>
+        <b>SIMPLY STONKS </b>
+        <img width={25} src={StonksLogo} alt="Stonks Logo" />
         <u>ST</u>
       </span>
     </TopBar>
