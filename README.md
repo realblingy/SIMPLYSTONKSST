@@ -13,7 +13,7 @@ I used JavaScript to make this application, along with styled-components, axios 
 - Sorting by market cap (ASC and DESC direction)
 - Some form of basic styling (this is a front-end role). Feel free to use libraries (bootstrap, material-ui) as long as it doesn't conflict with the primary criteria.
 
-You can also find the deployed version at https://6174efb7a5f84be219e146c1--priceless-einstein-ed2145.netlify.app/.
+You can also find the deployed version at https://master.d26danwbhrwb2t.amplifyapp.com/?fbclid=IwAR3t247u5uVWoNTIwZw8iugT4wOWN5ithAjjKVdwSo8A5Lv_KJ2V1LwNhxA.
 
 Hope you like what I've built!
 
@@ -23,4 +23,5 @@ Hope you like what I've built!
 
 - I only included the following countries: US, CA and AUS
 - API requests are only adjusted by market cap, country, offset and size
-- This is not responsive for mobile
+- ~~This is not responsive for mobile~~ Now responsive for mobile
+
