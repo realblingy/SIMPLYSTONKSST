@@ -6,15 +6,16 @@ import StockList from "./components/StockList";
 const AppContainer = styled.main`
   background-color: rgb(21, 27, 36);
   padding-bottom: 70px;
-  min-width: 1000px;
+  min-width: 1200px;
   position: relative;
 `;
 
 const AppListContainer = styled.div`
   display: flex;
   justify-content: center;
-  min-height: 600px;
+  min-width: 1200px;
   margin-top: 64px;
+  position: relative;
 `;
 
 function App() {

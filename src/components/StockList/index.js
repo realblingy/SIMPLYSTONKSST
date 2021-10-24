@@ -13,7 +13,8 @@ import "react-svg-radar-chart/build/css/index.css";
 import StockToolBar from "./StockToolBar";
 
 const StockListContainer = styled.div`
-  margin-top: 1rem;
+  // margin-top: 1rem;
+  position: relative;
 
   && {
     background-color: transparent;
