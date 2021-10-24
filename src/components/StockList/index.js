@@ -59,6 +59,10 @@ const lazyLoadStocks = (rows) => {
   return Array(rows).fill(<StockTile lazy />);
 };
 
+/**
+ * Renders the stock tiles in a table
+ * Also contains sorting by marketCap of country
+ */
 const StockList = () => {
   // Used to filter data
   const [country, setCountry] = useState("AU");

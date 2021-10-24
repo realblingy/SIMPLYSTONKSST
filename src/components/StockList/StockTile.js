@@ -34,6 +34,13 @@ const renderStrokeColor = (future, health, income, misc, past) => {
   }
 };
 
+/**
+ * A row tile which shows a stock's name, symbol and its snowflake score
+ * @param name Name of the stock
+ * @param symbol Symbol of the stock
+ * @param lazy Used to lazy load the tile (boolean)
+ * @param scoreData Contains the snowflake score
+ */
 const StockTile = ({ name, symbol, lazy, scoreData = {} }) => {
   const { future, health, income, misc, past } = scoreData;
 

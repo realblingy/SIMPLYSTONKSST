@@ -15,6 +15,9 @@ const TopBar = styled(AppBar)`
   }
 `;
 
+/**
+ * Header bar of the App
+ */
 const MainAppBar = () => {
   return (
     <TopBar>

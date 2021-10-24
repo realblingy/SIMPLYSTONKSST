@@ -29,7 +29,11 @@ const StyledInputLabel = styled(InputLabel)`
     color: white;
   }
 `;
-
+/**
+ * Used to filter stocks by either market cap and/or country
+ * @param country Country of stocks to be searched
+ * @param marketCap Sorting order by market cap (either ascending or desecnding)
+ */
 const StockToolBar = ({ country, setCountry, marketCap, setMarketCap }) => {
   const handleCountryChange = (e) => {
     setCountry(e.target.value);
