@@ -2,12 +2,22 @@ import React from "react";
 import {
   FormControl,
   InputLabel,
+  makeStyles,
   MenuItem,
   Select,
   Toolbar,
   Typography,
 } from "@material-ui/core";
 import styled from "styled-components";
+
+const useStyles = makeStyles({
+  icon: {
+    fill: "white",
+  },
+  root: {
+    fill: "white",
+  },
+});
 
 const StyledTypography = styled(Typography)`
   && {
@@ -37,6 +47,10 @@ const StyledSelect = styled(Select)`
 `;
 
 const StyledInputLabel = styled(InputLabel)`
+  .Mui-focused {
+    color: darkred;
+  }
+
   && {
     color: white;
   }
@@ -56,6 +70,8 @@ const StyledToolBar = styled(Toolbar)`
  * @param marketCap Sorting order by market cap (either ascending or desecnding)
  */
 const StockToolBar = ({ country, setCountry, marketCap, setMarketCap }) => {
+  const classes = useStyles();
+
   const handleCountryChange = (e) => {
     setCountry(e.target.value);
   };
@@ -75,6 +91,12 @@ const StockToolBar = ({ country, setCountry, marketCap, setMarketCap }) => {
           onChange={handleCountryChange}
           label="Country"
           data-testid="country-select-test"
+          inputProps={{
+            classes: {
+              icon: classes.icon,
+              root: classes.root,
+            },
+          }}
         >
           <MenuItem value="AU" data-testid="country-select-option">
             Australia
@@ -94,6 +116,12 @@ const StockToolBar = ({ country, setCountry, marketCap, setMarketCap }) => {
           label="Sort by Market Cap"
           value={marketCap}
           onChange={handleMarketCapChange}
+          inputProps={{
+            classes: {
+              icon: classes.icon,
+              root: classes.root,
+            },
+          }}
         >
           <MenuItem value="asc">Ascending</MenuItem>
           <MenuItem value="desc">Descending</MenuItem>
