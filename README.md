@@ -28,3 +28,4 @@ Hope you like what I've built!
 
 - I only included the following countries: US, CA and AUS
 - API requests are only adjusted by market cap, country, offset and size
+- This is not responsive for mobile
