@@ -18,6 +18,8 @@ I used JavaScript to make this application, along with styled-components, axios 
 
 \- Some form of basic styling (this is a front-end role). Feel free to use libraries (bootstrap, material-ui) as long as it doesn't conflict with the primary criteria.
 
+You can also find the deployed version at https://6174efb7a5f84be219e146c1--priceless-einstein-ed2145.netlify.app/.
+
 Hope you like what I've built!
 
 ### Notes
