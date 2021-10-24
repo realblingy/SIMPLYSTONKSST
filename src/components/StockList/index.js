@@ -24,11 +24,7 @@ const StockListContainer = styled(TableContainer)`
   }
 `;
 
-const StockListTable = styled(Table)`
-  // display: flex;
-  // flex-direction: column;
-  // height: 100%;
-`;
+const StockListTable = styled(Table)``;
 
 const StyledTableHead = styled(TableHead)`
   && {
@@ -122,7 +118,6 @@ const StockList = () => {
               style={{
                 color: "white",
               }}
-              // component="div"
               page={page}
               count={-1}
               rowsPerPage={rows}

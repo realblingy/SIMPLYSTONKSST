@@ -81,7 +81,6 @@ const StockTile = ({ name, symbol, lazy, scoreData = {} }) => {
             >
               <PolarGrid />
               <Radar
-                name="Mike"
                 dataKey="score"
                 fill={renderStrokeColor(future, health, income, misc, past)}
                 fillOpacity={0.6}
