@@ -6,28 +6,18 @@ import StockList from "./components/StockList";
 const AppContainer = styled.main`
   background-color: rgb(21, 27, 36);
   padding-bottom: 70px;
-  min-width: 1200px;
-  position: relative;
-  overflow-y: hidden;
-`;
-
-const AppListContainer = styled.div`
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  min-width: 1200px;
-  margin-top: 64px;
-  min-height: 1200px;
-
-  position: relative;
 `;
 
 function App() {
   return (
     <AppContainer>
       <MainAppBar />
-      <AppListContainer>
-        <StockList />
-      </AppListContainer>
+      <StockList />
     </AppContainer>
   );
 }

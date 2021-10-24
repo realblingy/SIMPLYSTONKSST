@@ -1,6 +1,7 @@
 import {
   Table,
   TableCell,
+  TableContainer,
   TableHead,
   TablePagination,
   TableRow,
@@ -12,22 +13,21 @@ import StockTile from "./StockTile";
 import "react-svg-radar-chart/build/css/index.css";
 import StockToolBar from "./StockToolBar";
 
-const StockListContainer = styled.div`
-  // margin-top: 1rem;
-  position: relative;
-
+const StockListContainer = styled(TableContainer)`
   && {
+    margin-top: 100px;
     background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
   }
 `;
 
 const StockListTable = styled(Table)`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  && {
-    width: 800px;
-  }
+  // display: flex;
+  // flex-direction: column;
+  // height: 100%;
 `;
 
 const StyledTableHead = styled(TableHead)`
@@ -108,9 +108,7 @@ const StockList = () => {
       <StockListTable>
         <StyledTableHead>
           <TableRow>
-            <StyledTableCell key="name" width={"500px"}>
-              Name
-            </StyledTableCell>
+            <StyledTableCell key="name">Name</StyledTableCell>
             <StyledTableCell key="symbol">Symbol</StyledTableCell>
             <StyledTableCell key="score">Score</StyledTableCell>
           </TableRow>
@@ -124,7 +122,7 @@ const StockList = () => {
               style={{
                 color: "white",
               }}
-              component="div"
+              // component="div"
               page={page}
               count={-1}
               rowsPerPage={rows}

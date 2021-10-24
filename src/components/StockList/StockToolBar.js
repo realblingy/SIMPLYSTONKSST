@@ -14,6 +14,12 @@ const StyledTypography = styled(Typography)`
     margin-right: 1rem;
     flex: 1;
   }
+
+  @media (max-width: 550px) {
+    && {
+      margin-bottom: 1rem;
+    }
+  }
 `;
 
 const StyledSelect = styled(Select)`
@@ -22,6 +28,12 @@ const StyledSelect = styled(Select)`
     margin-right: 1rem;
     width: 150px;
   }
+
+  @media (max-width: 550px) {
+    && {
+      margin-bottom: 1rem;
+    }
+  }
 `;
 
 const StyledInputLabel = styled(InputLabel)`
@@ -29,6 +41,15 @@ const StyledInputLabel = styled(InputLabel)`
     color: white;
   }
 `;
+
+const StyledToolBar = styled(Toolbar)`
+  @media (max-width: 550px) {
+    && {
+      flex-direction: column;
+    }
+  }
+`;
+
 /**
  * Used to filter stocks by either market cap and/or country
  * @param country Country of stocks to be searched
@@ -44,7 +65,7 @@ const StockToolBar = ({ country, setCountry, marketCap, setMarketCap }) => {
   };
 
   return (
-    <Toolbar data-testid="stocktoolbar" style={{ color: "white" }}>
+    <StyledToolBar data-testid="stocktoolbar" style={{ color: "white" }}>
       <StyledTypography>Biggest {country} Market Cap Gainers</StyledTypography>
       <FormControl>
         <StyledInputLabel id="country-select">Country</StyledInputLabel>
@@ -78,7 +99,7 @@ const StockToolBar = ({ country, setCountry, marketCap, setMarketCap }) => {
           <MenuItem value="desc">Descending</MenuItem>
         </StyledSelect>
       </FormControl>
-    </Toolbar>
+    </StyledToolBar>
   );
 };
 

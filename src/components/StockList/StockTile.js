@@ -17,6 +17,12 @@ const StyledTableCell = styled(TableCell)`
     color: white;
     height: 50px;
   }
+
+  @media (max-width: 550px) {
+    && {
+      font-size: 0.7em;
+    }
+  }
 `;
 
 const renderStrokeColor = (future, health, income, misc, past) => {
