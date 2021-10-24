@@ -124,6 +124,7 @@ const StockList = () => {
               style={{
                 color: "white",
               }}
+              component="div"
               page={page}
               count={-1}
               rowsPerPage={rows}

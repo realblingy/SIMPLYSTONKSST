@@ -8,6 +8,7 @@ const AppContainer = styled.main`
   padding-bottom: 70px;
   min-width: 1200px;
   position: relative;
+  overflow-y: hidden;
 `;
 
 const AppListContainer = styled.div`
@@ -15,6 +16,8 @@ const AppListContainer = styled.div`
   justify-content: center;
   min-width: 1200px;
   margin-top: 64px;
+  min-height: 1200px;
+
   position: relative;
 `;
 
